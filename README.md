@@ -1,6 +1,6 @@
 # Simple-Calculator
-Simple Calculator
-This is a simple calculator program implemented in Python. It provides a user-friendly command-line interface for performing basic arithmetic operations and calculating areas of various geometric shapes. The functionalities include:
+Calculator Program
+This Python program implements a simple calculator that performs basic arithmetic operations, area calculations, and power computations. It provides a user-friendly console interface for easy interaction.
 
 Features
 Basic Arithmetic Operations:
@@ -16,24 +16,63 @@ Area Calculations:
 Area of a Square
 Area of a Rectangle
 Area of a Circle
-Surface Area of a Cube
-Surface Area of a Cuboid
-Surface Area of a Sphere
+Area of a Cube
+Area of a Cuboid
+Area of a Sphere
 Usage
-Run the program in a Python environment.
-Choose an operation by entering the corresponding number.
-Provide the required input values when prompted.
-The calculator will display the result for the chosen operation.
-Installation
-To run this project, you need to have Python installed on your machine. Clone the repository and execute the calculator.py file:
+Initialize the Calculator: Create an instance of the Calculator class.
 
-bash
+python
 Copy code
-git clone <repository-url>
-cd <repository-directory>
-python calculator.py
-Contributions
-Feel free to fork the repository and submit pull requests for any improvements or additional features!
+user = Calculator()
+Display the Calculator Menu: Call the simple_math_cal method to display available operations.
+
+python
+Copy code
+user.simple_math_cal()
+Select an Operation: Input your choice (1-7) for the desired operation.
+
+Perform the Calculation: Based on your choice, input the required numbers to perform the calculation.
+
+Example Usage
+Here’s a step-by-step example of how to use the calculator:
+
+python
+Copy code
+# Step 1: Create a calculator instance
+user = Calculator()
+
+# Step 2: Display the calculator options
+user.simple_math_cal()
+
+# Step 3: User chooses an operation, for example, Addition (1)
+user_choice = int(input("Your choice: "))
+
+# Step 4: Input the numbers for the operation
+if user_choice == 1:  # Addition
+    n1 = int(input("n1: "))
+    n2 = int(input("n2: "))
+    user.add(n1, n2)  # This will print the result of the addition
+Example Operations
+Addition Example:
+
+python
+Copy code
+user.add(5, 3)  # Output: 8
+Square Root Example:
+
+python
+Copy code
+user.sqrt(16)  # Output: 4.0
+Area of a Circle Example:
+
+python
+Copy code
+user.circle(5)  # Output: 78.53981633974483 (area for radius 5)
+Conclusion
+This Calculator program is a simple and effective tool for performing mathematical calculations and area computations. It is implemented using basic Python constructs and demonstrates the use of classes and methods for organizing functionality.
+
+Feel free to contribute or modify the code to enhance its features!
 
 License
 This project is open source and available under the MIT License.
